@@ -19,6 +19,7 @@ function Navbar() {
                 <Link to="/" className="nav-link">Home</Link>
                 <Link to="/bugs" className="nav-link">Bugs</Link>
                 <Link to="/life" className="nav-link">Life</Link>
+                <a href="https://github.com/bishnuneupane13" className="nav-link">GitHub</a>
             </div>
 
             <div className="time-display">
