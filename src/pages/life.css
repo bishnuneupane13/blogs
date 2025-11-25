@@ -1,68 +1,121 @@
-/* Background like notebook paper */
+/* Modern Life Page - Professional Design */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 .App {
-    /* paper color */
     min-height: 100vh;
-    padding: 20px;
-    font-family: Arial, sans-serif;
+    background: #0a0a0a;
+    font-family: 'Inter', sans-serif;
 }
 
 /* Page header */
 .page-title {
-    font-size: 2.5rem;
-    color: #8b4513;
+    font-size: 2.25rem;
+    color: #ffffff;
     margin-bottom: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.03em;
 }
 
 .page-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: #a1a1aa;
+    margin-bottom: 2.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.page-content {
+    background: transparent;
 }
 
 /* Section styling */
 .life-section {
-    margin-bottom: 2rem;
-    padding: 15px;
-    border: 2px solid #c9a87c;
-    border-radius: 8px;
-    background: #fff8e1;
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
 }
 
 /* Section titles */
 .section-title {
-    font-size: 1.8rem;
-    color: #5d4037;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
 }
 
 /* Time/Date display */
 .time {
-    font-size: 1rem;
-    color: #8b4513;
+    font-size: 0.875rem;
+    color: #71717a;
     text-align: right;
-    margin-top: -1rem;
-    margin-bottom: 1rem;
-    font-style: italic;
+    display: block;
+    margin-top: -2.25rem;
+    margin-bottom: 1.5rem;
+    font-style: normal;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+}
+
+.life-section p {
+    color: #a1a1aa;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
 }
 
 /* Image scroll container */
 .image-scroll {
     display: flex;
-    gap: 10px;
+    gap: 1rem;
     overflow-x: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.image-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.image-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 3px;
+}
+
+.image-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.image-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .image-scroll img {
     width: 300px;
     height: 200px;
     object-fit: cover;
-    border: 1px solid #c9a87c;
-    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.image-scroll img:hover {
+    transform: scale(1.02);
+    border-color: rgba(255, 255, 255, 0.15);
 }
 
 /* Video container */
 .video-container {
-    margin-top: 10px;
+    margin-top: 1.5rem;
     text-align: center;
 }
 
@@ -70,55 +123,67 @@
     width: 100%;
     max-width: 560px;
     height: 315px;
-    border-radius: 5px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-
-.page-content {
-    background: repeating-linear-gradient(to top, #f4e8d8, #f4e8d8 10px, #c9a87c 10px, #c9a87c 20px);
-}
-
-/* Responsive adjustments for Life page */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .life-section {
-        padding: 10px;
+    .page-title {
+        font-size: 2rem;
     }
 
-    .image-scroll {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 8px;
+    .page-subtitle {
+        font-size: 0.9375rem;
+    }
+
+    .life-section {
+        padding: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.375rem;
+    }
+
+    .time {
+        margin-top: -2rem;
+    }
+
+    .life-section p {
+        font-size: 0.9375rem;
     }
 
     .image-scroll img {
         width: 250px;
-        height: auto;
     }
 }
 
 @media (max-width: 480px) {
+    .page-title {
+        font-size: 1.75rem;
+    }
+
     .life-section {
-        padding: 8px;
+        padding: 1.25rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .time {
+        font-size: 0.8125rem;
     }
 
     .image-scroll {
         flex-direction: column;
-        overflow-x: hidden;
-        overflow-y: auto;
-        gap: 6px;
     }
 
     .image-scroll img {
         width: 100%;
-        max-width: 100%;
-        height: auto;
     }
 
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .page-title {
-        font-size: 2rem;
+    .video-container iframe {
+        height: 200px;
     }
 }

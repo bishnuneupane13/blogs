@@ -21,17 +21,14 @@ function Bugs() {
                         <span className="subsection-icon">📚</span>
                         <h2>What I'm Learning</h2>
                     </div>
-                    <p className="subsection-desc" style={{ fontSize: "1.5rem" }}>
+                    <p className="subsection-desc">
                         Current topics I'm studying and skills I'm developing in bug bounty hunting.
                     </p>
 
                     <div className="empty-state">
                         <div className="empty-icon" style={{ fontSize: "3rem", margin: "-4rem 0 0 -1rem" }}>🎓</div>
-                        <h3 style={{
-                            fontSize: "3rem", borderBottom: "1px solid #ccc", paddingBottom: "1rem",
-                            marginBottom: "1rem", textDecoration: "underline #fbeacaff 10px", fontWeight: "bold", fontStyle: "oblique", fontFamily: "monospace"
-                        }}>How to find bugs</h3>
-                        <p style={{ fontSize: "1.5rem" }}>Learning how to find bugs and vulnerabilities in web applications.</p>
+                        <h3>How to find bugs</h3>
+                        <p>Learning how to find bugs and vulnerabilities in web applications.</p>
                         <Link to="/bugs/learn" className="hero-btn">Learn More</Link>
                     </div>
                 </div>
@@ -42,17 +39,14 @@ function Bugs() {
                         <span className="subsection-icon">🔍</span>
                         <h2>What I Found</h2>
                     </div>
-                    <p className="subsection-desc" style={{ fontSize: "1.5rem" }}>
+                    <p className="subsection-desc">
                         Bugs and vulnerabilities I've discovered during my bug bounty hunting.
                     </p>
 
                     <div className="empty-state">
                         <div className="empty-icon" style={{ fontSize: "3rem", margin: "-4rem 0 0 -1rem" }}>🐛</div>
-                        <h3 style={{
-                            fontSize: "3rem", borderBottom: "1px solid #ccc", paddingBottom: "1rem",
-                            marginBottom: "1rem", textDecoration: "underline #fbeacaff 10px", fontWeight: "bold", fontStyle: "oblique", fontFamily: "monospace"
-                        }}>Found Bugs</h3>
-                        <p style={{ fontSize: "1.5rem" }}>Discovered bugs and vulnerabilities in web applications.</p>
+                        <h3>Found Bugs</h3>
+                        <p>Discovered bugs and vulnerabilities in web applications.</p>
                         <Link to="/bugs/found" className="hero-btn">Learn More</Link>
                     </div>
                 </div>

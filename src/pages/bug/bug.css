@@ -1,58 +1,38 @@
-/* Bug pages specific styling */
+/* Modern Bug Pages - Professional Design */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 .resources-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
+    gap: 1rem;
     margin-top: 1.5rem;
 }
 
 .resource-card {
-    background: rgba(255, 255, 255, 0.7);
-    border: 2px solid #c9a87c;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 12px;
     padding: 1.5rem;
     display: flex;
     align-items: flex-start;
     gap: 1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
     text-decoration: none;
     position: relative;
     overflow: hidden;
 }
 
-.resource-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: repeating-linear-gradient(45deg,
-            transparent,
-            transparent 10px,
-            rgba(201, 168, 124, 0.05) 10px,
-            rgba(201, 168, 124, 0.05) 20px);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.resource-card:hover::before {
-    opacity: 1;
-}
-
 .resource-card:hover {
-    border-color: #8b4513;
-    transform: translateY(-4px) rotate(-1deg);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
 }
 
 .resource-icon {
-    font-size: 2rem;
-    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+    font-size: 1.75rem;
     flex-shrink: 0;
+    opacity: 0.9;
 }
 
 .resource-content {
@@ -60,32 +40,34 @@
 }
 
 .resource-content h3 {
-    color: #3e2723;
-    font-size: 1.3rem;
+    color: #ffffff;
+    font-size: 1.125rem;
     margin-bottom: 0.5rem;
-    font-family: 'Caveat', cursive;
-    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 .resource-content p {
-    color: #5d4037;
-    font-size: 0.95rem;
-    font-family: 'Patrick Hand', cursive;
-    line-height: 1.5;
+    color: #a1a1aa;
+    font-size: 0.9375rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
     margin: 0;
 }
 
 .resource-arrow {
-    font-size: 1.5rem;
-    color: #8b4513;
+    font-size: 1.25rem;
+    color: #71717a;
     flex-shrink: 0;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     align-self: center;
 }
 
 .resource-card:hover .resource-arrow {
-    color: #5d4037;
-    transform: translateX(6px);
+    color: #a1a1aa;
+    transform: translateX(4px);
 }
 
 /* Learning card specific styles */
@@ -95,40 +77,37 @@
 
 .learning-card:hover {
     transform: translateY(-2px);
-    rotate: 0deg;
 }
 
 .status-badge {
     display: inline-block;
-    margin-top: 0.8rem;
-    padding: 4px 12px;
-    background: linear-gradient(135deg, #e9c48c 0%, #d4a574 100%);
-    border: 1px solid #c9a87c;
-    border-radius: 15px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #3e2723;
-    font-family: 'Patrick Hand', cursive;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 0.75rem;
+    padding: 0.375rem 0.75rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #a1a1aa;
+    font-family: 'Inter', sans-serif;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .resources-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
     }
 
     .resource-card {
-        padding: 1.2rem;
+        padding: 1.25rem;
     }
 
     .resource-content h3 {
-        font-size: 1.2rem;
+        font-size: 1.0625rem;
     }
 
     .resource-content p {
-        font-size: 0.9rem;
+        font-size: 0.9375rem;
     }
 }
 
@@ -138,10 +117,10 @@
     }
 
     .resource-arrow {
-        font-size: 1.2rem;
+        font-size: 1.125rem;
     }
 
     .resource-content h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 }

@@ -4,119 +4,67 @@ import Footer from "../../components/Footer.js";
 import "./bug.css";
 
 function FoundBugs() {
-    // Section 1: My Bug Discoveries
-    const section1 = {
-        title: "My Bug Discoveries",
-        description: "Bugs and security vulnerabilities I've found and reported through bug bounty programs.",
-        resources: [
-            {
-                name: "Coming Soon!",
-                icon: "🎯",
-                description: "I'll be documenting my bug bounty findings here. Stay tuned for updates on vulnerabilities I've discovered and reported.",
-                isEmpty: true
-            }
-        ]
-    };
-
-    // Section 2: Useful Resources
-    const section2 = {
-        title: "Useful Resources",
-        description: "Essential resources and platforms for learning and practicing bug bounty hunting.",
-        resources: [
-            {
-                name: "PortSwigger Web Security Academy",
-                url: "https://portswigger.net/web-security",
-                icon: "📖",
-                description: "Free online training for web application security"
-            },
-            {
-                name: "HackerOne",
-                url: "https://www.hackerone.com/",
-                icon: "🎯",
-                description: "Bug bounty platform and community"
-            },
-            {
-                name: "OWASP Top 10",
-                url: "https://owasp.org/www-project-top-ten/",
-                icon: "🔒",
-                description: "Top 10 web application security risks"
-            },
-            {
-                name: "Bug Bounty Bootcamp",
-                url: "https://nostarch.com/bug-bounty-bootcamp",
-                icon: "📚",
-                description: "Comprehensive guide to finding security bugs"
-            }
-        ]
-    };
+    // Section: My Bug Discoveries
+    const bugDiscoveries = [
+        {
+            name: "Coming Soon!",
+            icon: "🎯",
+            description:
+                "I'll be documenting my bug bounty findings here. Stay tuned for updates on vulnerabilities I've discovered and reported.",
+            isEmpty: true,
+        },
+        // Future bug discoveries can be added here
+        // {
+        //   name: "Bug Name",
+        //   icon: "🐛",
+        //   description: "Description of the bug and how it was found",
+        //   isEmpty: false,
+        // }
+    ];
 
     return (
-        <div className="App">
+        <div className="app">
             <Navbar />
 
-            <div className="page-content">
-                <div className="section-header">
+            <main className="page-content">
+                {/* Page Header */}
+                <header className="page-header">
                     <h1>🐛 Found Bugs</h1>
-                    <p>My bug bounty hunting journey - discoveries, learnings, and resources.</p>
-                </div>
+                    <p>My bug bounty hunting journey – discoveries, learnings, and resources.</p>
+                </header>
 
-                {/* Section 1: My Bug Discoveries */}
-                <div className="bugs-subsection">
-                    <div className="subsection-title">
-                        <span className="subsection-icon">🔍</span>
-                        <h2>{section1.title}</h2>
+                {/* Bug Discoveries Section */}
+                <section className="bug-section">
+                    <div className="section-header">
+                        <span className="section-icon">🔍</span>
+                        <h2>My Bug Discoveries</h2>
                     </div>
-                    <p className="subsection-desc">{section1.description}</p>
+                    <p className="section-description">
+                        Bugs and security vulnerabilities I've found and reported through bug bounty programs.
+                    </p>
 
-                    {section1.resources[0].isEmpty ? (
+                    {/* If there are no bugs yet */}
+                    {bugDiscoveries[0].isEmpty ? (
                         <div className="empty-state">
-                            <div className="empty-icon">{section1.resources[0].icon}</div>
-                            <h3>{section1.resources[0].name}</h3>
-                            <p>{section1.resources[0].description}</p>
+                            <div className="empty-icon">{bugDiscoveries[0].icon}</div>
+                            <h3>{bugDiscoveries[0].name}</h3>
+                            <p>{bugDiscoveries[0].description}</p>
                         </div>
                     ) : (
                         <div className="resources-grid">
-                            {section1.resources.map((item, index) => (
+                            {bugDiscoveries.map((bug, index) => (
                                 <div className="resource-card" key={index}>
-                                    <div className="resource-icon">{item.icon}</div>
+                                    <div className="resource-icon">{bug.icon}</div>
                                     <div className="resource-content">
-                                        <h3>{item.name}</h3>
-                                        <p>{item.description}</p>
+                                        <h3>{bug.name}</h3>
+                                        <p>{bug.description}</p>
                                     </div>
                                 </div>
                             ))}
                         </div>
                     )}
-                </div>
-
-                {/* Section 2: Useful Resources */}
-                <div className="bugs-subsection">
-                    <div className="subsection-title">
-                        <span className="subsection-icon">�</span>
-                        <h2>{section2.title}</h2>
-                    </div>
-                    <p className="subsection-desc">{section2.description}</p>
-
-                    <div className="resources-grid">
-                        {section2.resources.map((resource, index) => (
-                            <a
-                                href={resource.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="resource-card"
-                                key={index}
-                            >
-                                <div className="resource-icon">{resource.icon}</div>
-                                <div className="resource-content">
-                                    <h3>{resource.name}</h3>
-                                    <p>{resource.description}</p>
-                                </div>
-                                <div className="resource-arrow">→</div>
-                            </a>
-                        ))}
-                    </div>
-                </div>
-            </div>
+                </section>
+            </main>
 
             <Footer />
         </div>
