@@ -17,7 +17,7 @@ const lifeSections = [
             img3,
             img4
         ],
-        time: "26 OCT 2025",
+        time: "-26 OCT 2025",
 
         sectionVideo: "https://www.youtube.com/watch?v=ZHzTI5YCksY"
     },
