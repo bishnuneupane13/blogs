@@ -1,6 +1,7 @@
 
 import Navbar from "../components/navbar.js";
 import Footer from "../components/Footer.js";
+import { Link } from "react-router-dom";
 
 
 function Bugs() {
@@ -31,7 +32,7 @@ function Bugs() {
                             marginBottom: "1rem", textDecoration: "underline #fbeacaff 10px", fontWeight: "bold", fontStyle: "oblique", fontFamily: "monospace"
                         }}>How to find bugs</h3>
                         <p style={{ fontSize: "1.5rem" }}>Learning how to find bugs and vulnerabilities in web applications.</p>
-                        <button className="hero-btn">Learn More</button>
+                        <Link to="/bugs/learn" className="hero-btn">Learn More</Link>
                     </div>
                 </div>
 
@@ -52,7 +53,7 @@ function Bugs() {
                             marginBottom: "1rem", textDecoration: "underline #fbeacaff 10px", fontWeight: "bold", fontStyle: "oblique", fontFamily: "monospace"
                         }}>Found Bugs</h3>
                         <p style={{ fontSize: "1.5rem" }}>Discovered bugs and vulnerabilities in web applications.</p>
-                        <button className="hero-btn">Learn More</button>
+                        <Link to="/bugs/found" className="hero-btn">Learn More</Link>
                     </div>
                 </div>
             </div>
