@@ -34,6 +34,16 @@
     margin-bottom: 0.5rem;
 }
 
+/* Time/Date display */
+.time {
+    font-size: 1rem;
+    color: #8b4513;
+    text-align: right;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
 /* Image scroll container */
 .image-scroll {
     display: flex;

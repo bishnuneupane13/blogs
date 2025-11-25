@@ -17,6 +17,7 @@ const lifeSections = [
             img3,
             img4
         ],
+        time: "26 OCT 2025",
 
         sectionVideo: "https://www.youtube.com/watch?v=ZHzTI5YCksY"
     },
@@ -34,9 +35,11 @@ function Life() {
                 <p className="page-subtitle">Daily life experiences and personal stories.</p>
 
                 {/* Sections */}
-                {lifeSections.map((section, index) => (
+                {lifeSections.map((section, time, index) => (
                     <div className="life-section" key={index}>
                         <h2 className="section-title">{section.title}</h2>
+                        <h1 className="time"> {section.time}
+                        </h1>
                         <p>{section.description}</p>
 
                         {/* Images */}
