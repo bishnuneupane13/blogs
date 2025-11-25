@@ -201,48 +201,106 @@ body::before {
 /* Bugs page styling */
 .bugs-subsection {
   margin: 2rem 0;
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(8px);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   transition: transform 0.3s ease;
+  border-left: 5px solid #8b4513;
 }
 
 .bugs-subsection:hover {
   transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
 .empty-state {
   text-align: center;
+  margin-top: 1.5rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.6);
+  border: 2px dashed #c9a87c;
+  border-radius: 12px;
+}
+
+.empty-state h3 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: bold;
+  font-style: oblique;
+  font-family: 'Caveat', cursive;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  text-decoration: underline #fbeacaff 8px;
+  text-underline-offset: 5px;
+  color: #3e2723;
+}
+
+.empty-state p {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  color: #5d4037;
+  font-family: 'Patrick Hand', cursive;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.empty-state .hero-btn,
+.empty-state button.hero-btn {
   margin-top: 1rem;
-}
-
-.empty-state .learn-more {
-  margin-top: 0.8rem;
-  background: linear-gradient(45deg, #ff6b6b, #f06595);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 0.5rem 1.2rem;
+  padding: 12px 28px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #e9c48c 0%, #d4a574 100%);
+  border: 2px solid #c9a87c;
+  color: #3e2723;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
+  transition: all 0.3s ease;
+  font-family: 'Patrick Hand', cursive;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  display: inline-block;
 }
 
-.empty-state .learn-more:hover {
-  background: linear-gradient(45deg, #ff4e4e, #e04e7a);
-  transform: translateY(-2px);
+.empty-state .hero-btn:hover,
+.empty-state button.hero-btn:hover {
+  background: linear-gradient(135deg, #d4a574 0%, #c9a87c 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
   .bugs-subsection {
-    padding: 1rem;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
   }
 
-  .empty-state .learn-more {
+  .empty-state {
+    padding: 1.5rem;
+  }
+
+  .empty-state .empty-icon {
+    font-size: 3rem !important;
+    margin: -2rem 0 1rem -0.5rem !important;
+  }
+
+  .empty-state h3 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem) !important;
+    text-decoration-thickness: 6px !important;
+  }
+
+  .empty-state p {
+    font-size: clamp(1rem, 3vw, 1.3rem) !important;
+  }
+
+  .empty-state .hero-btn,
+  .empty-state button.hero-btn {
     width: 100%;
+    padding: 14px 20px;
   }
 }
+
 
 .hero-buttons {
   display: flex;
@@ -728,23 +786,39 @@ body::before {
   }
 
   .bugs-subsection {
-    padding: 1.5rem;
+    padding: 1.2rem;
   }
 
-  /* Enhanced Bugs section styling */
-  .bugs-subsection h3 {
-    font-size: 2rem;
-    font-weight: 800;
-    font-family: 'Caveat', cursive;
+  .subsection-title h2 {
+    font-size: 1.8rem;
   }
 
-  .bugs-subsection p {
-    font-size: 1.3rem;
-    font-weight: 600;
+  .subsection-desc {
+    font-size: 1rem !important;
   }
 
-  .bugs-subsection .empty-icon {
-    font-size: 4rem;
-    margin: -2rem 0 0 -1rem;
+  .empty-state {
+    padding: 1.2rem;
+  }
+
+  .empty-state .empty-icon {
+    font-size: 2.5rem !important;
+    margin: -1.5rem 0 0.8rem 0 !important;
+  }
+
+  .empty-state h3 {
+    font-size: 1.5rem !important;
+    text-decoration-thickness: 5px !important;
+    padding-bottom: 0.8rem;
+  }
+
+  .empty-state p {
+    font-size: 1rem !important;
+  }
+
+  .empty-state .hero-btn,
+  .empty-state button.hero-btn {
+    font-size: 1rem;
+    padding: 12px 20px;
   }
 }
