@@ -1,0 +1,69 @@
+/* Background like notebook paper */
+.App {
+    /* paper color */
+    min-height: 100vh;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Page header */
+.page-title {
+    font-size: 2.5rem;
+    color: #8b4513;
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Section styling */
+.life-section {
+    margin-bottom: 2rem;
+    padding: 15px;
+    border: 2px solid #c9a87c;
+    border-radius: 8px;
+    background: #fff8e1;
+}
+
+/* Section titles */
+.section-title {
+    font-size: 1.8rem;
+    color: #5d4037;
+    margin-bottom: 0.5rem;
+}
+
+/* Image scroll container */
+.image-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+.image-scroll img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid #c9a87c;
+    border-radius: 5px;
+}
+
+/* Video container */
+.video-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border-radius: 5px;
+}
+
+
+.page-content {
+    background: repeating-linear-gradient(to top, #f4e8d8, #f4e8d8 10px, #c9a87c 10px, #c9a87c 20px);
+}
