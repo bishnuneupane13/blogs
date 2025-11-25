@@ -13,7 +13,7 @@ A modern, glassmorphism-styled personal blog website built with React. Features 
 
 ## 🚀 Live Demo
 
-Visit the live site: [bugs.github.io](https://bishnuneupane13.github.io/bugs)
+Visit the live site: [bugs.github.io](https://bishnuneupane13.github.io/blogs)
 
 ## 🛠️ Built With
 
@@ -26,8 +26,8 @@ Visit the live site: [bugs.github.io](https://bishnuneupane13.github.io/bugs)
 
 1. Clone the repository
 ```bash
-git clone https://github.com/bishnuneupane13/bugs.github.io.git
-cd bugs.github.io
+git clone https://github.com/bishnuneupane13/blogs.git
+cd blogs
 ```
 
 2. Install dependencies
