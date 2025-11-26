@@ -45,7 +45,7 @@ function Life() {
                         {/* Images */}
                         <div className="image-scroll">
                             {section.images.map((img, i) => (
-                                <img src={img} alt={`${section.title} ${i + 1}`} key={i} />
+                                <img src={img} alt={`${section.title} ${i + 1}`} className="images" key={i} />
                             ))}
                         </div>
 
