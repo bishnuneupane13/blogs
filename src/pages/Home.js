@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const posts = [
-    { date: '2025-12-04', title: 'my-first-website', slug: 'my-first-website' },
+    { date: '2025-02-04', title: 'my-first-website', slug: 'my-first-website' },
 ];
 
 function Home() {

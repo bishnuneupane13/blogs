@@ -29,8 +29,8 @@ function Header() {
                 {/* Social */}
                 <div style={{ display: 'flex', gap: '0.8rem' }}>
                     <a href="https://github.com/bishnuneupane13" target="_blank" rel="noopener noreferrer" style={{ color: '#666', textDecoration: 'none' }}>[github]</a>
-                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#666', textDecoration: 'none' }}>[twitter]</a>
-                    <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#666', textDecoration: 'none' }}>[linkedin]</a>
+                    <a href="https://twitter.com/bishnuneupane13" target="_blank" rel="noopener noreferrer" style={{ color: '#666', textDecoration: 'none' }}>[twitter]</a>
+                    <a href="https://linkedin.com/bishnuneupane13" target="_blank" rel="noopener noreferrer" style={{ color: '#666', textDecoration: 'none' }}>[linkedin]</a>
                 </div>
             </div>
 
