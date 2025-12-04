@@ -44,11 +44,9 @@ function About() {
 
             <p style={command}>$ cat skills.txt</p>
             <ul style={{ ...output, listStyle: 'none', color: '#aaa' }}>
-                <li>→ Web Application Security</li>
+                <li>→ Web Application Development</li>
                 <li>→ Bug Bounty Hunting</li>
-                <li>→ Penetration Testing</li>
-                <li>→ OWASP Top 10</li>
-                <li>→ Python / JavaScript</li>
+
             </ul>
         </div>
     );
