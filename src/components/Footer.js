@@ -1,16 +1,18 @@
+import React from 'react';
+
 function Footer() {
     return (
-        <footer className="footer">
-            <div className="footer-content">
-                <p>&copy; {new Date().getFullYear()} Blogs of my life. All rights reserved.</p>
-                <div className="social-links">
-                    <a href="https://twitter.com/bishnuneupane13" className="social-link">Twitter</a>
-                    <a href="https://www.linkedin.com/in/bishnuneupane13/" className="social-link">LinkedIn</a>
-                    <a href="https://github.com/bishnuneupane13" className="social-link">GitHub</a>
-                </div>
-            </div>
+        <footer style={{
+            marginTop: 'auto',
+            paddingTop: '2rem',
+            borderTop: '1px dashed #333',
+            textAlign: 'center',
+            color: '#555',
+            fontSize: '0.9rem',
+        }}>
+            <p>© {new Date().getFullYear()} Bishnu Neupane</p>
         </footer>
-    )
+    );
 }
 
 export default Footer;

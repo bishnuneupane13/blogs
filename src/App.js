@@ -1,30 +1,31 @@
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.js";
-import Bugs from "./pages/Bugs.js";
-import Life from "./pages/Life.js";
-import BugBountyLearning from "./pages/bug/learn.js";
-import FoundBugs from "./pages/bug/bug.js";
-import { initScrollReveal } from './scrollReveal';
-import { useEffect } from 'react';
-import './App.css'
+import Post from "./pages/Post.js";
+import About from "./pages/About.js";
+import Writeups from "./pages/Writeups.js";
+import WriteupDetail from "./pages/WriteupDetail.js";
+import Contact from "./pages/Contact.js";
+import Header from "./components/Header.js";
+import Footer from "./components/Footer.js";
+import './App.css';
 
 function App() {
-  useEffect(() => {
-    initScrollReveal();
-  }, []);
-
   return (
-    <>
-      <Router basename="/blogs">
+    <Router basename="/blogs">
+      <div className="container">
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/bugs" element={<Bugs />} />
-          <Route path="/bugs/learn" element={<BugBountyLearning />} />
-          <Route path="/bugs/found" element={<FoundBugs />} />
-          <Route path="/life" element={<Life />} />
+          <Route path="/post/:slug" element={<Post />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/writeups" element={<Writeups />} />
+          <Route path="/writeup/:slug" element={<WriteupDetail />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
-      </Router>
-    </>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
